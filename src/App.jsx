@@ -23,7 +23,7 @@ function App() {
   }
 
   const diceValues = dices.map((dice) => {
-    return <Die value={dice.value} key={dice.id}></Die>;
+    return <Die value={dice.value} key={dice.id} isHeld={dice.isHeld}></Die>;
   });
 
   return (

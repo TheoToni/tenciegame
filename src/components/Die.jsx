@@ -1,9 +1,11 @@
 import React from "react";
-import styles from "./Die.module.css";
 
 function Die(props) {
+  const styles = {
+    backgroundColor: props.isHeld ? "#59E391" : "white",
+  };
   return (
-    <div className={styles.die}>
+    <div className="die" style={styles}>
       <h2>{props.value}</h2>
     </div>
   );
