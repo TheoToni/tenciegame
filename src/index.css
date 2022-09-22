@@ -38,3 +38,12 @@ body {
   grid-column-gap: 25px;
   grid-row-gap: 25px;
 }
+.roll {
+  background-color: #5035ff;
+  width: 92.16px;
+  height: 35.84px;
+  border: none;
+  border-radius: 5px;
+  margin: 20px;
+  cursor: pointer;
+}

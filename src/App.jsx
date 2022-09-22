@@ -8,13 +8,17 @@ function App() {
   function generateDices() {
     const newDice = [];
     for (let i = 0; i < 10; i++) {
-      newDice.push(Math.ceil(Math.random() * 6));
+      newDice.push({ value: Math.ceil(Math.random() * 6), isHeld: false });
     }
     return newDice;
   }
 
+  function generateDiceHandler() {
+    setDices(generateDices());
+  }
+
   const diceValues = dices.map((dice) => {
-    return <Die value={dice}></Die>;
+    return <Die value={dice.value}></Die>;
   });
 
   return (
@@ -26,6 +30,9 @@ function App() {
           current value between rolls.
         </p>
         <div className="grid-wrapper">{diceValues}</div>
+        <button onClick={generateDiceHandler} className="roll">
+          Roll
+        </button>
       </div>
     </div>
   );
